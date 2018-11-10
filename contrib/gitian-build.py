@@ -201,7 +201,7 @@ def main():
     # Add leading 'v' for tags
     if args.commit and args.pull:
         raise Exception('Cannot have both commit and pull')
-    args.commit = ('' if args.commit else 'v') + args.version
+    args.commit = args.version
     print(args.commit)
 
     if args.setup:
